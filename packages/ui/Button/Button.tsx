@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ContainerButton } from "./styles";
 
 interface Props {
   children: React.ReactNode;
@@ -8,8 +9,8 @@ interface Props {
 
 export const Button = ({ children, onClick, disabled }: Props) => {
   return (
-    <button onClick={onClick} disabled={disabled}>
+    <ContainerButton onClick={onClick} disabled={disabled}>
       {children}
-    </button>
+    </ContainerButton>
   );
 };
