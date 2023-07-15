@@ -1,5 +1,6 @@
 "use client";
 import { Header, Button } from "ui";
+import { FiStar } from "react-icons/fi";
 
 export default function Page() {
   return (
@@ -10,7 +11,7 @@ export default function Page() {
           console.log("click");
         }}
       >
-        {/* <Button.ButtonIcon /> */}
+        <Button.Icon icon={FiStar} size={14} />
         Click here
       </Button.Base>
     </>

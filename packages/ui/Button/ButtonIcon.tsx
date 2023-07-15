@@ -1,9 +1,10 @@
 import * as React from "react";
 
 interface Props {
-  icon: React.ReactElement;
+  icon: React.ElementType;
+  size?: number;
 }
 
-export const ButtonIcon = ({ icon: Icon }: Props) => {
-  return Icon;
+export function ButtonIcon({ icon: Icon }: Props) {
+  return <Icon />;
 };

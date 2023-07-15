@@ -1,10 +1,7 @@
-import { Button as Content } from "./Button";
+import { Button as ButtonBase } from "./Button";
 import { ButtonIcon } from "./ButtonIcon";
 
-export const Button: {
-  Base: typeof Content;
-  Icon: typeof ButtonIcon;
-} = {
-  Base: Content,
+export const Button = {
+  Base: ButtonBase,
   Icon: ButtonIcon,
 };

@@ -7,7 +7,7 @@ interface Props {
   disabled?: boolean;
 }
 
-export const Button = ({ children, onClick, disabled }: Props) => {
+export function Button({ children, onClick, disabled }: Props) {
   return (
     <ContainerButton onClick={onClick} disabled={disabled}>
       {children}
