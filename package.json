@@ -4,12 +4,15 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo clean"
   },
   "devDependencies": {
     "@turbo/gen": "^1.9.7",
+    "autoprefixer": "^10.4.14",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
+    "postcss": "^8.4.26",
     "prettier": "^2.5.1",
     "styled-components": "^6.0.4",
     "turbo": "latest"

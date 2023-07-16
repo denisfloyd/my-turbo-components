@@ -1,9 +1,9 @@
-import { Header } from "ui";
+// import { Header } from "ui";
 
 export default function Page() {
   return (
     <>
-      <Header text="Web" />
+      {/* <Header text="Web" /> */}
       {/* <Button /> */}
     </>
   );
