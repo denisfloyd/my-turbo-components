@@ -14,9 +14,9 @@ importers:
       eslint:
         specifier: ^8.29.0
         version: 8.29.0
-      eslint-config-acme:
+      eslint-config-df:
         specifier: workspace:0.0.0
-        version: link:packages/eslint-config-acme
+        version: link:packages/eslint-config-df
       prettier:
         specifier: ^2.8.0
         version: 2.8.0
@@ -26,9 +26,9 @@ importers:
 
   apps/docs:
     dependencies:
-      '@acme/core':
+      '@df/core':
         specifier: workspace:0.0.0
-        version: link:../../packages/acme-core
+        version: link:../../packages/core
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -36,9 +36,9 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
-      '@acme/tsconfig':
+      '@df/tsconfig':
         specifier: workspace:0.0.0
-        version: link:../../packages/acme-tsconfig
+        version: link:../../packages/df-tsconfig
       '@storybook/addon-actions':
         specifier: ^6.5.14
         version: 6.5.14(react-dom@18.2.0)(react@18.2.0)
@@ -60,9 +60,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^1.3.2
         version: 1.3.2
-      eslint-config-acme:
+      eslint-config-df:
         specifier: workspace:0.0.0
-        version: link:../../packages/eslint-config-acme
+        version: link:../../packages/eslint-config-df
       serve:
         specifier: ^13.0.4
         version: 13.0.4
@@ -73,11 +73,11 @@ importers:
         specifier: ^2.9.15
         version: 2.9.15
 
-  packages/acme-core:
+  packages/core:
     devDependencies:
-      '@acme/tsconfig':
+      '@df/tsconfig':
         specifier: workspace:*
-        version: link:../acme-tsconfig
+        version: link:../df-tsconfig
       '@types/react':
         specifier: ^18.0.9
         version: 18.0.26
@@ -87,9 +87,9 @@ importers:
       eslint:
         specifier: ^8.15.0
         version: 8.29.0
-      eslint-config-acme:
+      eslint-config-df:
         specifier: workspace:*
-        version: link:../eslint-config-acme
+        version: link:../eslint-config-df
       react:
         specifier: ^18.1.0
         version: 18.2.0
@@ -100,13 +100,13 @@ importers:
         specifier: ^4.5.3
         version: 4.9.3
 
-  packages/acme-tsconfig: {}
+  packages/df-tsconfig: {}
 
-  packages/acme-utils:
+  packages/df-utils:
     devDependencies:
-      '@acme/tsconfig':
+      '@df/tsconfig':
         specifier: workspace:*
-        version: link:../acme-tsconfig
+        version: link:../df-tsconfig
       '@types/react':
         specifier: ^18.0.9
         version: 18.0.26
@@ -116,9 +116,9 @@ importers:
       eslint:
         specifier: ^8.15.0
         version: 8.29.0
-      eslint-config-acme:
+      eslint-config-df:
         specifier: workspace:*
-        version: link:../eslint-config-acme
+        version: link:../eslint-config-df
       react:
         specifier: ^18.1.0
         version: 18.2.0
@@ -129,7 +129,7 @@ importers:
         specifier: ^4.5.3
         version: 4.9.3
 
-  packages/eslint-config-acme:
+  packages/eslint-config-df:
     dependencies:
       eslint-config-next:
         specifier: latest
@@ -3223,6 +3223,7 @@ packages:
   /@storybook/react@6.5.14(@babel/core@7.20.5)(eslint@8.4.1)(react-dom@18.2.0)(react@18.2.0)(require-from-string@2.0.2)(typescript@4.9.3):
     resolution: {integrity: sha512-SL0P5czN3g/IZAYw8ur9I/O8MPZI7Lyd46Pw+B1f7+Ou8eLmhqa8Uc8+3fU6v7ohtUDwsBiTsg3TAfTVEPog4A==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
     peerDependencies:
       '@babel/core': ^7.11.5
       '@storybook/builder-webpack4': '*'
@@ -5009,6 +5010,7 @@ packages:
 
   /chokidar@2.1.8:
     resolution: {integrity: sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==}
+    deprecated: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
     dependencies:
       anymatch: 2.0.0
       async-each: 1.0.3
@@ -6276,6 +6278,7 @@ packages:
 
   /eslint-config-prettier@8.5.0(eslint@8.29.0):
     resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+    hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
@@ -6521,6 +6524,7 @@ packages:
   /eslint@8.29.0:
     resolution: {integrity: sha512-isQ4EEiyUjZFbEKvEGJKKGBwXtvXX+zJbkVKCgTuB9t/+jUBcy8avhkEwWJecI15BkRkOYmvIM5ynbhRjEkoeg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    hasBin: true
     dependencies:
       '@eslint/eslintrc': 1.3.3
       '@humanwhocodes/config-array': 0.11.7
@@ -6567,6 +6571,7 @@ packages:
   /eslint@8.4.1:
     resolution: {integrity: sha512-TxU/p7LB1KxQ6+7aztTnO7K0i+h0tDi81YRY9VzB6Id71kNz+fFYnf5HD5UOQmxkzcoa0TlVZf9dpMtUv0GpWg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    hasBin: true
     dependencies:
       '@eslint/eslintrc': 1.3.3
       '@humanwhocodes/config-array': 0.9.5
@@ -10505,6 +10510,7 @@ packages:
 
   /resolve@2.0.0-next.4:
     resolution: {integrity: sha512-iMDbmAWtfU+MHpxt/I5iWI7cY6YVEZUQ3MBgPQ++XD1PELuJHIl82xBmObyP2KyQmkNB2dsqF7seoQQiAn5yDQ==}
+    hasBin: true
     dependencies:
       is-core-module: 2.11.0
       path-parse: 1.0.7
@@ -10548,6 +10554,7 @@ packages:
   /rollup@2.79.1:
     resolution: {integrity: sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==}
     engines: {node: '>=10.0.0'}
+    hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -11210,6 +11217,7 @@ packages:
   /sucrase@3.29.0:
     resolution: {integrity: sha512-bZPAuGA5SdFHuzqIhTAqt9fvNEo9rESqXIG3oiKdF8K4UmkQxC4KlNL3lVyAErXp+mPvUqZ5l13qx6TrDIGf3A==}
     engines: {node: '>=8'}
+    hasBin: true
     dependencies:
       commander: 4.1.1
       glob: 7.1.6
@@ -11511,6 +11519,7 @@ packages:
 
   /tree-kill@1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
+    hasBin: true
     dev: true
 
   /trim-newlines@1.0.0:
@@ -11575,6 +11584,7 @@ packages:
 
   /tsup@5.12.9(typescript@4.9.3):
     resolution: {integrity: sha512-dUpuouWZYe40lLufo64qEhDpIDsWhRbr2expv5dHEMjwqeKJS2aXA/FPqs1dxO4T6mBojo7rvo3jP9NNzaKyDg==}
+    hasBin: true
     peerDependencies:
       '@swc/core': ^1
       postcss: ^8.4.12
@@ -11748,6 +11758,7 @@ packages:
   /typescript@4.9.3:
     resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==}
     engines: {node: '>=4.2.0'}
+    hasBin: true
 
   /uglify-js@3.17.4:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
@@ -11920,6 +11931,7 @@ packages:
 
   /update-browserslist-db@1.0.10(browserslist@4.21.4):
     resolution: {integrity: sha512-OztqDenkfFkbSG+tRxBeAnCVPckDBcvibKd35yDONx6OU8N7sqgwc7rCbkJ/WcYtVRZ4ba68d6byhC21GFh7sQ==}
+    hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:
@@ -12061,6 +12073,7 @@ packages:
   /vite@2.9.15:
     resolution: {integrity: sha512-fzMt2jK4vQ3yK56te3Kqpkaeq9DkcZfBbzHwYpobasvgYmP2SoAr6Aic05CsB4CzCZbsDv4sujX3pkEGhLabVQ==}
     engines: {node: '>=12.2.0'}
+    hasBin: true
     peerDependencies:
       less: '*'
       sass: '*'
@@ -12201,6 +12214,7 @@ packages:
   /webpack@4.46.0:
     resolution: {integrity: sha512-6jJuJjg8znb/xRItk7bkT0+Q7AHCYjjFnvKIWQPkNIOyRqoCGvkOs0ipeQzrqz4l5FtN5ZI/ukEHroeX/o1/5Q==}
     engines: {node: '>=6.11.5'}
+    hasBin: true
     peerDependencies:
       webpack-cli: '*'
       webpack-command: '*'
@@ -12240,6 +12254,7 @@ packages:
   /webpack@5.75.0:
     resolution: {integrity: sha512-piaIaoVJlqMsPtX/+3KTTO6jfvrSYgauFVdt8cr9LTHKmcq/AMd4mhzsiP7ZF/PGRNPGA8336jldh9l2Kt2ogQ==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
     peerDependencies:
       webpack-cli: '*'
     peerDependenciesMeta:
