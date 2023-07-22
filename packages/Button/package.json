@@ -1,5 +1,5 @@
 {
-  "name": "@df/core",
+  "name": "@df/button",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -24,6 +24,9 @@
     "react": "^18.1.0",
     "tsup": "^5.10.1",
     "typescript": "^4.5.3"
+  },
+  "peerDependencies": {
+    
   },
   "publishConfig": {
     "access": "public"

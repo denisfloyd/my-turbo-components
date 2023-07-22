@@ -15,6 +15,7 @@
     "eslint": "^8.29.0",
     "eslint-config-df": "workspace:0.0.0",
     "prettier": "^2.8.0",
+    "styled-components": "^6.0.5",
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0"
