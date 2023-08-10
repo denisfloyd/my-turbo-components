@@ -1,11 +1,19 @@
 module.exports = {
-  extends: ["next", "turbo", "prettier"],
-  rules: {
-    "@next/next/no-html-link-for-pages": "off",
+  env: {
+    node: true,
   },
+  parser: "@typescript-eslint/parser",
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+  ],
+  plugins: ["@typescript-eslint"],
   parserOptions: {
-    babelOptions: {
-      presets: [require.resolve("next/babel")],
-    },
+    sourceType: "module",
+    ecmaVersion: 2020,
+  },
+  rules: {
+    "@typescript-eslint/no-non-null-assertion": "off",
   },
 };

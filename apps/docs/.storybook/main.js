@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  stories: ["../stories/**/*.stories.mdx", "../stories/**/*.stories.tsx"],
+  stories: ["../stories/**/*.stories.mdx", "../../../packages/**/*.mdx"],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
   framework: "@storybook/react",
   core: {
@@ -11,14 +11,6 @@ module.exports = {
     // customize the Vite config here
     return {
       ...config,
-      resolve: {
-        alias: [
-          {
-            find: "@df/core",
-            replacement: path.resolve(__dirname, "../../../packages/core/"),
-          },
-        ],
-      },
     };
   },
 };

@@ -14,7 +14,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@df/tsconfig": "workspace:0.0.0",
+    "@df/tsconfig": "workspace:*",
     "@storybook/addon-actions": "^6.5.14",
     "@storybook/addon-docs": "^6.5.14",
     "@storybook/addon-essentials": "^6.5.14",
