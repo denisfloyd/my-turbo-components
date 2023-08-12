@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.25.2",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.29.0",
     "eslint-config-df": "workspace:*",
     "prettier": "^2.8.0",
