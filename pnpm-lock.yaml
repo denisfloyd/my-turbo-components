@@ -17,12 +17,21 @@ importers:
       eslint-config-df:
         specifier: workspace:*
         version: link:packages/eslint-config-df
+      postcss:
+        specifier: ^8.4.27
+        version: 8.4.27
       prettier:
         specifier: ^2.8.0
         version: 2.8.0
       prettier-plugin-tailwindcss:
         specifier: ^0.4.1
         version: 0.4.1(prettier@2.8.0)
+      tailwind-variants:
+        specifier: ^0.1.13
+        version: 0.1.13(tailwindcss@3.3.3)
+      tailwindcss:
+        specifier: ^3.3.3
+        version: 3.3.3
       turbo:
         specifier: latest
         version: 1.10.12
@@ -93,9 +102,6 @@ importers:
       eslint-config-df:
         specifier: workspace:*
         version: link:../eslint-config-df
-      postcss:
-        specifier: ^8.4.20
-        version: 8.4.27
       react:
         specifier: ^18.1.0
         version: 18.2.0
@@ -152,9 +158,6 @@ importers:
 
   packages/tailwind-config:
     devDependencies:
-      tailwind-variants:
-        specifier: ^0.1.13
-        version: 0.1.13(tailwindcss@3.3.3)
       tailwindcss:
         specifier: ^3.3.3
         version: 3.3.3
