@@ -13,7 +13,9 @@ export default {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: "color" },
+    style: { control: "select", options: ["primary", "success", "error"] },
+    size: { control: "select", options: ["sm", "md", "lg"] },
+    children: { control: "", name: "Label" },
   },
 };
 
@@ -25,22 +27,16 @@ export const Primary = {
   },
 };
 
-export const Secondary = {
+export const Success = {
   args: {
     children: "Button",
+    style: "success",
   },
 };
 
-export const Large = {
+export const Error = {
   args: {
-    size: "large",
     children: "Button",
-  },
-};
-
-export const Small = {
-  args: {
-    size: "small",
-    children: "Button",
+    style: "error",
   },
 };
