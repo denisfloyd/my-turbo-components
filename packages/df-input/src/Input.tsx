@@ -3,7 +3,7 @@ import { tv, VariantProps } from "tailwind-variants";
 
 const buttonTailwind = tv({
   slots: {
-    base: "py-0 px-4 rounded text-sm border-[1px] focus:outline-none dark:bg-slate-900 dark:text-slate-100 dark:disabled:text-slate-500 disabled:text-slate-500 disabled:cursor-not-allowed",
+    base: "py-0 px-4 rounded text-sm border-[1px] focus:outline-none dark:bg-slate-900 dark:text-slate-50 dark:disabled:text-slate-500 disabled:text-slate-500 disabled:cursor-not-allowed",
   },
   variants: {
     state: {

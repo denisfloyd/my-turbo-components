@@ -3,14 +3,14 @@ import { tv, VariantProps } from "tailwind-variants";
 
 const buttonTailwind = tv({
   slots: {
-    base: "px-4 py-2 rounded transition-all duration-1000 cursor-pointer text-white relative",
+    base: "px-4 py-2 rounded transition-all duration-1000 cursor-pointer text-slate-50 relative",
   },
   variants: {
     style: {
       primary: "bg-blue-700 hover:bg-blue-600 outline-blue-700",
       success: "bg-emerald-700 hover:bg-emerald-600 outline-emerald-700",
       error: "bg-red-700 hover:bg-red-600 outline-red-700",
-      borderless: "bg-white text-textColor",
+      borderless: "bg-transparent text-textColor",
     },
     size: {
       sm: "text-sm",
@@ -18,7 +18,7 @@ const buttonTailwind = tv({
       lg: "text-lg",
     },
     isOutline: {
-      true: "bg-white text-textColor outline-none -outline-offset-1",
+      true: "bg-white text-textColor outline-none -outline-offset-1 hover:text-slate-50",
     },
     disabled: {
       true: "opacity-50 cursor-default",

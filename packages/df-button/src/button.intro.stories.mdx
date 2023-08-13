@@ -1,28 +1,26 @@
 import {Meta} from '@storybook/blocks';
 
-<Meta title="Form Elements/Label/Get started" />
+<Meta title="Basic UI Components/Button/Get started" />
 
 # Button - Get started
 
-Labels are right-aligned, succinct and descriptive. Use sentence case.
-
-If a long label is needed, it should wrap and not be truncated.
+Use buttons to trigger an immediate action such as saving a document. They are used in forms, toolbars, dialog footers and as stand-alone action triggers.
 
 ## Install
 
-Add Label to your project.
+Add Button to your project.
 
-`npm install --save @tempo-io/tui-label;`
+`npm install --save @df/button`
 
 ### **Use**
 
-`import Label from '@tempo-io/tui-label';`
-
-and use them like so
+`import Button from '@df/button';`
 
 ```
   const example = () => (
-    <Button>Button Text</Button>
-  )
+    <div>
+       <Button style="primary">Button Label</Button>
+    </div>
+)
 ```
 
