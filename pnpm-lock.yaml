@@ -35,6 +35,9 @@ importers:
       '@df/button':
         specifier: workspace:^
         version: link:../../packages/df-button
+      '@df/input':
+        specifier: workspace:^
+        version: link:../../packages/df-input
     devDependencies:
       '@storybook/addon-essentials':
         specifier: ^7.2.3
@@ -77,6 +80,39 @@ importers:
         version: 7.2.3
 
   packages/df-button:
+    devDependencies:
+      '@df/tsconfig':
+        specifier: workspace:*
+        version: link:../df-tsconfig
+      '@types/react':
+        specifier: ^18.0.9
+        version: 18.0.9
+      '@types/react-dom':
+        specifier: ^18.0.4
+        version: 18.0.4
+      eslint:
+        specifier: ^8.15.0
+        version: 8.29.0
+      eslint-config-df:
+        specifier: workspace:*
+        version: link:../eslint-config-df
+      postcss:
+        specifier: ^8.4.20
+        version: 8.4.20
+      react:
+        specifier: ^18.1.0
+        version: 18.2.0
+      tailwind-config:
+        specifier: workspace:*
+        version: link:../tailwind-config
+      tsup:
+        specifier: ^5.12.9
+        version: 5.12.9(postcss@8.4.20)(typescript@4.5.3)
+      typescript:
+        specifier: ^4.5.3
+        version: 4.5.3
+
+  packages/df-input:
     devDependencies:
       '@df/tsconfig':
         specifier: workspace:*
@@ -3889,7 +3925,7 @@ packages:
   /@types/react-dom@18.0.4:
     resolution: {integrity: sha512-FgTtbqPOCI3dzZPZoC2T/sx3L34qxy99ITWn4eoSA95qPyXDMH0ALoAqUp49ITniiJFsXUVBtalh/KffMpg21Q==}
     dependencies:
-      '@types/react': 18.0.9
+      '@types/react': 18.2.20
     dev: true
 
   /@types/react@18.0.9:
