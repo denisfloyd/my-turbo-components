@@ -1,5 +1,4 @@
 import Button from "./Button";
-// import "../dist/index.css";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -13,9 +12,14 @@ export default {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    style: { control: "select", options: ["primary", "success", "error"] },
+    style: {
+      control: "select",
+      options: ["primary", "success", "error", "borderless"],
+    },
     size: { control: "select", options: ["sm", "md", "lg"] },
     children: { control: "", name: "Label" },
+    isOutline: { control: "boolean", name: "Outline Button" },
+    isPending: { control: "boolean", name: "Pending State" },
   },
 };
 
