@@ -13,8 +13,6 @@ const config = {
   stories: [
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-    "../src/*.stories.@(js|jsx|ts|tsx)",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)",
     "../../../packages/**/src/*.stories.@(js|jsx|mjs|ts|tsx|mdx)",
   ],
   addons: [
