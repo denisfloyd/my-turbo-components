@@ -1,5 +1,5 @@
 {
-  "name": "@df/utils",
+  "name": "df-utils",
   "private": true,
   "version": "0.0.0",
   "main": "./dist/index.js",
