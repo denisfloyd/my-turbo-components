@@ -15,6 +15,14 @@ jobs:
       - name: ⬇️ Checkout Repo
         uses: actions/checkout@v2
 
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/tempo-io/tui
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: ⎔ Setup Node.js 18.x
         uses: actions/setup-node@v2
         with:
@@ -25,9 +33,6 @@ jobs:
         with:
           version: 7
           run_install: false
-
-      - name: Setup npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
 
       - name: ⎔ Get pnpm store directory
         shell: bash
@@ -43,7 +48,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: 👉 Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
 
       - name: 👷 Build
         id: run-build
