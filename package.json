@@ -18,7 +18,7 @@
     "eslint-config-df": "workspace:*",
     "prettier": "^2.8.0",
     "prettier-plugin-tailwindcss": "^0.4.1",
-    "turbo": "latest"
+    "turbo": "1.10.4"
   },
   "packageManager": "pnpm@7.15.0"
 }
