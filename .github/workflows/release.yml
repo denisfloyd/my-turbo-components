@@ -28,7 +28,6 @@ jobs:
 
       - name: Setup npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-        run: echo "auto-install-peers=true" > .npmrc
 
       - name: ⎔ Get pnpm store directory
         shell: bash
