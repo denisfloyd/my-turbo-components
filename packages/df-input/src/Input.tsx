@@ -1,51 +1,53 @@
-import { ComponentProps, forwardRef } from "react";
-import { tv, VariantProps } from "tailwind-variants";
+import React, { ComponentProps, forwardRef } from 'react';
+import { tv, VariantProps } from 'tailwind-variants';
 
 const buttonTailwind = tv({
   slots: {
-    base: "py-0 px-4 rounded text-sm border-[1px] focus:outline-none dark:bg-slate-900 dark:text-slate-50 dark:disabled:text-slate-500 disabled:text-slate-500 disabled:cursor-not-allowed",
+    base: 'rounded border-[1px] px-4 py-0 text-sm focus:outline-none disabled:cursor-not-allowed disabled:text-slate-500 dark:bg-slate-900 dark:text-slate-50 dark:disabled:text-slate-500',
   },
   variants: {
     state: {
-      normal: "border-slate-400",
-      required: "border-orange-400",
-      error: "border-red-400",
+      normal: 'border-slate-400',
+      required: 'border-orange-400',
+      error: 'border-red-400',
     },
     width: {
-      sm: "w-24",
-      md: "w-48",
-      lg: "w-96",
-      full: "w-full",
+      sm: 'w-24',
+      md: 'w-48',
+      lg: 'w-96',
+      full: 'w-full',
     },
     height: {
-      sm: "h-5",
-      md: "h-10",
-      lg: "h-16",
-      full: "w-full",
+      sm: 'h-5',
+      md: 'h-10',
+      lg: 'h-16',
+      full: 'w-full',
     },
   },
   defaultVariants: {
-    state: "normal",
-    width: "md",
-    height: "md",
+    state: 'normal',
+    width: 'md',
+    height: 'md',
   },
 });
 
 const getInputStateStyle = (
   error: boolean,
   isRequired: boolean,
-  value: string | number | readonly string[] | undefined
-): VariantProps<typeof buttonTailwind>["state"] => {
+  value: string | number | readonly string[] | undefined,
+): VariantProps<typeof buttonTailwind>['state'] => {
   if (error) {
-    return "error";
+    return 'error';
   }
 
-  if (isRequired && (!value || (value && value === ""))) {
-    return "required";
+  if (isRequired && (!value || (value && value === ''))) {
+    return 'required';
   }
+
+  return 'normal';
 };
 
-export type Props = ComponentProps<"input"> &
+export type Props = ComponentProps<'input'> &
   VariantProps<typeof buttonTailwind> & {
     isRequired?: boolean;
     width?: string;
@@ -58,7 +60,7 @@ const Input: React.ForwardRefExoticComponent<Props> = forwardRef(
   (
     {
       disabled = false,
-      placeholder = "",
+      placeholder = '',
       isRequired = false,
       value,
       error = false,
@@ -66,15 +68,15 @@ const Input: React.ForwardRefExoticComponent<Props> = forwardRef(
       width,
       state,
       className,
-      type = "text",
+      type = 'text',
       ...props
     }: Props,
-    ref: React.Ref<HTMLInputElement>
+    ref: React.Ref<HTMLInputElement>,
   ) => {
     const { base } = buttonTailwind({
       width,
       height,
-      state: getInputStateStyle(error, isRequired, value),
+      state: state || getInputStateStyle(error, isRequired, value),
     });
 
     return (
@@ -83,7 +85,7 @@ const Input: React.ForwardRefExoticComponent<Props> = forwardRef(
         disabled={disabled}
         placeholder={placeholder}
         type={type}
-        {...(type === "number" ? { step: 1 } : {})}
+        {...(type === 'number' ? { step: 1 } : {})}
         ref={ref}
         width={width}
         height={height}
@@ -91,8 +93,8 @@ const Input: React.ForwardRefExoticComponent<Props> = forwardRef(
         {...props}
       />
     );
-  }
+  },
 );
-Input.displayName = "Input";
+Input.displayName = 'Input';
 
 export default Input;

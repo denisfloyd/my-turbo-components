@@ -1,4 +1,9 @@
 module.exports = {
   root: true,
-  extends: ["df"],
+  extends: ['df'],
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
+    extraFileExtensions: ['.mdx'],
+  },
 };

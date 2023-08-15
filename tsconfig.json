@@ -1,0 +1,7 @@
+{
+  "files": [],
+  "references": [
+    {"path": "./packages/df-button"},
+    {"path": "./packages/df-input"},
+  ]
+}
