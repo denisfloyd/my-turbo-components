@@ -1,5 +1,5 @@
-import "./styles.css";
+import Button from './Button';
 
-import Button from "./Button";
+import './styles.css';
 
 export default Button;

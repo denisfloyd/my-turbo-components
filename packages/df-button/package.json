@@ -15,24 +15,26 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint \"src/**/*.{tsx,ts}*\"",
+    "lint": "eslint . --ext .tsx,.ts --max-warnings=0",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@df/tsconfig": "workspace:*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "cssnano": "^6.0.1",
-    "eslint": "^8.15.0",
+    "df-tsconfig": "workspace:*",
     "eslint-config-df": "workspace:*",
     "postcss": "^8.4.20",
-    "react": "^18.1.0",
     "tailwind-config": "workspace:*",
     "tsup": "^5.12.9",
     "typescript": "^4.5.3"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "tailwind-variants": "^0.1.13",
+    "react": "^18.1.0"
   }
 }
