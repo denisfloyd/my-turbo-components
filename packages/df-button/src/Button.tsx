@@ -66,6 +66,7 @@ const Button = ({
   isPending = false,
   children,
   disabled = false,
+  className,
   ...props
 }: Props) => {
   const { base } = buttonTailwind({
@@ -76,7 +77,7 @@ const Button = ({
   });
 
   return (
-    <button className={base()} {...props} disabled={isPending || disabled}>
+    <button className={base({ className })} {...props} disabled={isPending || disabled}>
       {children}
       {isPending && <ButtonLoading />}
     </button>
