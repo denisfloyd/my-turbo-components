@@ -1,6 +1,12 @@
 {
   "name": "df-button",
   "version": "0.3.0",
+  "description": "Custom Button component built with tailwindcss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisfloyd/my-turbo-components.git",
+    "directory": "/packages/df-button"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

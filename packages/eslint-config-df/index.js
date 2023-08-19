@@ -27,6 +27,7 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/prop-types': 'off',
     'react/button-has-type': 'off',
+    'import/order': 'off',
     'simple-import-sort/exports': 'warn',
     'simple-import-sort/imports': [
       'warn',
