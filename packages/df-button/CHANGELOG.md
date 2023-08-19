@@ -1,5 +1,11 @@
 # df-button
 
+## 0.4.0
+
+### Minor Changes
+
+- 90e6865: Added same with button on ButtonGroup component
+
 ## 0.3.0
 
 ### Minor Changes
