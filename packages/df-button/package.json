@@ -1,6 +1,6 @@
 {
   "name": "df-button",
-  "version": "0.4.0",
+  "version": "0.0.0",
   "description": "Custom Button component built with tailwindcss",
   "repository": {
     "type": "git",
@@ -36,11 +36,12 @@
     "tsup": "^5.12.9",
     "typescript": "^4.5.3"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "tailwind-variants": "^0.1.13",
     "react": "^18.1.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   }
 }

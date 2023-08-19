@@ -1,6 +1,6 @@
 {
   "name": "df-input",
-  "version": "0.3.0",
+  "version": "0.0.0",
   "description": "Custom Input component built with tailwindcss",
   "repository": {
     "type": "git",
@@ -32,12 +32,16 @@
     "cssnano": "^6.0.1",
     "eslint-config-df": "workspace:*",
     "postcss": "^8.4.20",
-    "react": "^18.1.0",
     "tailwind-config": "workspace:*",
     "tsup": "^5.12.9",
     "typescript": "^4.5.3"
   },
+  "dependencies": {
+    "tailwind-variants": "^0.1.13",
+    "react": "^18.1.0"
+  },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   }
 }
