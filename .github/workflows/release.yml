@@ -19,7 +19,7 @@ jobs:
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/tempo-io/tui
+          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/denisfloyd/my-turbo-components
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
