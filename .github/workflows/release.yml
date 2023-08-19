@@ -15,6 +15,14 @@ jobs:
       - name: ⬇️ Checkout Repo
         uses: actions/checkout@v2
 
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/tempo-io/tui
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: 🧳 Install pnpm
         uses: pnpm/action-setup@v2
         with:
