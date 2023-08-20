@@ -14,7 +14,13 @@
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "noEmit": true,
+    "outDir": "compiled",
+    "allowJs": true,
+    "strictNullChecks": true,
+    "pretty": true,
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules"]
 }

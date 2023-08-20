@@ -1,7 +1,26 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  plugins: ['simple-import-sort', 'react', 'react-hooks', '@typescript-eslint'],
-  extends: ['airbnb', 'prettier', 'eslint:recommended', 'plugin:storybook/recommended'],
+  plugins: [
+    'simple-import-sort',
+    'prettier',
+    'react',
+    'react-hooks',
+    '@typescript-eslint',
+    'jest-dom',
+    'jest',
+    'testing-library',
+  ],
+  extends: [
+    'airbnb',
+    'prettier',
+    'plugin:prettier/recommended',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:storybook/recommended',
+    'plugin:jest-dom/recommended',
+    'plugin:testing-library/react',
+  ],
   parser: '@typescript-eslint/parser',
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
@@ -17,6 +36,8 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     'import/extensions': 'off',
+    'import/order': 'off',
+    'import/no-import-module-exports': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/require-default-props': 'off',
@@ -27,7 +48,6 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/prop-types': 'off',
     'react/button-has-type': 'off',
-    'import/order': 'off',
     'simple-import-sort/exports': 'warn',
     'simple-import-sort/imports': [
       'warn',
@@ -74,6 +94,12 @@ module.exports = {
         'storybook/default-exports': 'off',
       },
     },
+    {
+      files: ['*.@(spec|test).@(ts|tsx)'],
+      rules: {
+        'react/react-in-jsx-scope': 'off',
+      },
+    },
   ],
   settings: {
     'import/resolver': {
@@ -81,7 +107,13 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
         paths: ['.'],
       },
-      typescript: {},
     },
+    typescript: {},
+    react: {
+      version: 'detect',
+    },
+  },
+  env: {
+    jest: true,
   },
 };
