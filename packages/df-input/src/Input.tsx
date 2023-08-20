@@ -21,7 +21,6 @@ const buttonTailwind = tv({
       sm: 'h-5',
       md: 'h-10',
       lg: 'h-16',
-      full: 'w-full',
     },
   },
   defaultVariants: {
@@ -56,7 +55,7 @@ export type Props = ComponentProps<'input'> &
     ref?: React.Ref<HTMLInputElement>;
   };
 
-const Input: React.ForwardRefExoticComponent<Props> = forwardRef(
+const Input = forwardRef<HTMLInputElement, Props>(
   (
     {
       disabled = false,
@@ -70,8 +69,8 @@ const Input: React.ForwardRefExoticComponent<Props> = forwardRef(
       className,
       type = 'text',
       ...props
-    }: Props,
-    ref: React.Ref<HTMLInputElement>,
+    },
+    ref,
   ) => {
     const { base } = buttonTailwind({
       width,

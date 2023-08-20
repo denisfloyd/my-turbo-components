@@ -14,7 +14,11 @@ export default {
   argTypes: {
     height: { control: 'select', options: ['sm', 'md', 'lg', 'full'] },
     width: { control: 'select', options: ['sm', 'md', 'lg', 'full'] },
-    state: { control: 'select', options: ['normal', 'error', 'required'] },
+    state: {
+      control: 'select',
+      description: 'It will override isRequire and error props regardless their behavior',
+      options: ['normal', 'error', 'required'],
+    },
     placeholder: { control: 'text' },
     disabled: { control: 'boolean', name: 'Is Disabled field ?' },
     error: { control: 'boolean', name: 'Is field contain error ?' },

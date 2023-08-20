@@ -54,3 +54,6 @@ jobs:
 
       - name: 👮 Lint
         run: pnpm run lint:ci
+
+      - name: 🧪 Test
+        run: pnpm run test:ci
