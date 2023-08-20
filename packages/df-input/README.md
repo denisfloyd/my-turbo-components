@@ -1,21 +1,32 @@
-# Input - Get started
+# df-input - Get started
 
-Use inputs to allow users to enter, select and search for text.
+Custom input react component built with tailwindcss. It allow users to enter, select and search for text.
 
 ## Install
 
-Add Input to your project.
+Add Button to your project.
 
-`npm install --save @df/input`
+`npm install --save df-input`
 
-### **Use**
+`` * added styles.css to your application *``
 
-`import Input from '@df/input';`
+```
+import 'df-input/styles.css'
+```
+
+## **Use**
+
+### Input
+`import Input from 'df-input';`
 
 ```
   const example = () => (
     <div>
-       <Input value={'Label'} />
+       <Input />
     </div>
   )
 ```
+
+## Override styles
+
+You can easily override any style of component just adding a custom tailwind class inside element's `className` property. For that, it's required to have tailwindcss as a dependency and setup on the project.

@@ -74,6 +74,7 @@ module.exports = {
         ],
       },
     ],
+    'testing-library/await-async-events': 'off',
   },
   ignorePatterns: [
     '.next',

@@ -27,9 +27,10 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "eslint . --ext .tsx,.ts --max-warnings=0",
     "check-types": "tsc --noEmit",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage"
   },
   "devDependencies": {
     "@types/react": "^18.0.9",
