@@ -2,5 +2,8 @@
   "name": "df-tsconfig",
   "version": "0.0.0",
   "private": true,
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
 }
