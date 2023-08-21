@@ -1,5 +1,11 @@
 # df-button
 
+## 0.1.2
+
+### Patch Changes
+
+- a2fa4fd: Added test cases to component
+
 ## 0.1.1
 
 ### Patch Changes
