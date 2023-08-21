@@ -48,6 +48,17 @@ jobs:
         id: run-build
         run: pnpm run build:ci
 
+      - name: 📚 Publish Storybook to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBaseDir: 'apps/docs'
+          storybookBuildDir: 'storybook-static'
+          buildScriptName: 'turbo run build && pnpm run build-storybook'
+          zip: true
+
       - name: 🛫 Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1

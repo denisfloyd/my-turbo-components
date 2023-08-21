@@ -4,22 +4,48 @@ import { Meta } from '@storybook/blocks';
 
 # Button - Get started
 
-Use buttons to trigger an immediate action such as saving a document. They are used in forms, toolbars, dialog footers and as stand-alone action triggers.
+Custom button react component built with tailwindcss.
 
 ## Install
 
 Add Button to your project.
 
-`npm install --save @df/button`
+`npm install --save df-button`
 
-### **Use**
+` * added styles.css to your application *`
 
-`import Button from '@df/button';`
+```
+import 'df-button/styles.css'
+```
+
+## **Use**
+
+### Button
+
+`import Button from 'df-button';`
 
 ```
   const example = () => (
     <div>
        <Button style="primary">Button Label</Button>
     </div>
-)
+  )
 ```
+
+### Button Group
+
+`import Button from 'df-button';`
+
+```
+  const example = () => (
+    <ButtonGroup>
+       <Button style="primary">Button Label</Button>
+       <Button style="primary">Button Label</Button>
+       <Button style="primary">Button Label</Button>
+    </ButtonGroup>
+  )
+```
+
+## Override styles
+
+You can easily override any style of component just adding a custom tailwind class inside element's `className` property. For that, it's required to have tailwindcss as a dependency and setup on the project.

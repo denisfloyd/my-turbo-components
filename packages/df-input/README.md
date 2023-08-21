@@ -4,7 +4,7 @@ Custom input react component built with tailwindcss. It allow users to enter, se
 
 ## Install
 
-Add Button to your project.
+Add Input to your project.
 
 `npm install --save df-input`
 
