@@ -51,6 +51,7 @@ jobs:
         run: pnpm run build:ci
 
       - name: 📚 Publish Storybook to Chromatic
+        # if: steps.changesets.outputs.hasChangesets == 'true'
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
