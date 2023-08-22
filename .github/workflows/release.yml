@@ -56,11 +56,11 @@ jobs:
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storybookBaseDir: 'apps/docs'
           storybookBuildDir: 'storybook-static'
           workingDir: 'apps/docs'
-          storybookConfigDir: 'apps/docs'
+          buildScriptName: 'pnpm run build-storybook'
           zip: true
+          exitOnceUploaded: true
 
       - name: 🛫 Create Release Pull Request or Publish to npm
         id: changesets

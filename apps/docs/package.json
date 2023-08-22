@@ -8,7 +8,7 @@
     "test": "echo \"no test specified, please ignote docs app..\" && exit 0",
     "storybook-dev": "storybook dev -p 6006",
     "dev": "storybook dev -p 6006",
-    "build": "storybook build"
+    "build-storybook": "storybook build"
   },
   "keywords": [],
   "author": "",
