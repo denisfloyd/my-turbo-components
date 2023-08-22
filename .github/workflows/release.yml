@@ -58,7 +58,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: 'storybook-static'
           workingDir: 'apps/docs'
-          buildScriptName: 'pnpm run build-storybook'
+          buildScriptName: 'build-storybook'
           zip: true
           exitOnceUploaded: true
 
