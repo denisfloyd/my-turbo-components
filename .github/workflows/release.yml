@@ -58,7 +58,6 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBaseDir: 'apps/docs'
           storybookBuildDir: 'storybook-static'
-          buildScriptName: 'pnpm run build-storybook'
           zip: true
 
       - name: 🛫 Create Release Pull Request or Publish to npm
