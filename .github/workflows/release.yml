@@ -50,18 +50,6 @@ jobs:
         id: run-build
         run: pnpm run build:ci
 
-      - name: 📚 Publish Storybook to Chromatic
-        # if: steps.changesets.outputs.hasChangesets == 'true'
-        uses: chromaui/action@v1
-        # Chromatic GitHub Action options
-        with:
-          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storybookBuildDir: 'storybook-static'
-          workingDir: 'apps/docs'
-          zip: true
-          exitOnceUploaded: true
-
       - name: 🛫 Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
@@ -73,3 +61,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: 📚 Publish Storybook to Chromatic
+        if: steps.changesets.outputs.published == 'true'
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: 'storybook-static'
+          workingDir: 'apps/docs'
+          zip: true
+          exitOnceUploaded: true
