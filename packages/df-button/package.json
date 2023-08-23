@@ -42,7 +42,7 @@
     "tailwind-config": "workspace:*",
     "tsup": "^5.12.9",
     "typescript": "^4.5.3",
-    "jest-config": "workspace:*"
+    "jest-config-df": "workspace:*"
   },
   "dependencies": {
     "tailwind-variants": "^0.1.13",

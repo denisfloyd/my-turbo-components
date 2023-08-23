@@ -1,5 +1,5 @@
 import { Config } from 'jest';
-import { jestConfigJsdom } from 'jest-config';
+import { jestConfigJsdom } from 'jest-config-df';
 
 const jestConfig: Config = {
   ...jestConfigJsdom,

@@ -94,9 +94,9 @@ importers:
       eslint-config-df:
         specifier: workspace:*
         version: link:../eslint-config-df
-      jest-config:
+      jest-config-df:
         specifier: workspace:*
-        version: link:../jest-config
+        version: link:../jest-config-df
       postcss:
         specifier: ^8.4.20
         version: 8.4.20
@@ -134,9 +134,9 @@ importers:
       eslint-config-df:
         specifier: workspace:*
         version: link:../eslint-config-df
-      jest-config:
+      jest-config-df:
         specifier: workspace:*
-        version: link:../jest-config
+        version: link:../jest-config-df
       postcss:
         specifier: ^8.4.20
         version: 8.4.20
@@ -234,7 +234,7 @@ importers:
         specifier: ^4.5.3
         version: 4.5.3
 
-  packages/jest-config:
+  packages/jest-config-df:
     devDependencies:
       '@testing-library/dom':
         specifier: 9.3.1
