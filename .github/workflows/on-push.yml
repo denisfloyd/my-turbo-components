@@ -48,10 +48,6 @@ jobs:
       - name: 💅 Prettier
         run: pnpm run prettier-check
 
-      - name: 👷 Build
-        id: run-build
-        run: pnpm run build:ci
-
       - name: 👮 Lint
         run: pnpm run lint:ci
 

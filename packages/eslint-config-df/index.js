@@ -93,6 +93,7 @@ module.exports = {
       rules: {
         'storybook/hierarchy-separator': 'error',
         'storybook/default-exports': 'off',
+        'react/react-in-jsx-scope': 'off',
       },
     },
     {
