@@ -211,7 +211,6 @@ To generate your changelog, run `npx changeset` in your local branch:
 When you raise a new pull request to GitHub with your `changelogs`, the [GitHub Action](https://github.com/changesets/action) will run the `release` workflow. Then after your changes go to production (`main`), `changeset` will create a "Release's Pull Request" automatically. 
 
 <br />
-<br />
 
 # :closed_book: License
 

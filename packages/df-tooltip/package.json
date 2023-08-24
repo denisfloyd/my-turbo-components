@@ -1,0 +1,54 @@
+{
+  "name": "df-tooltip",
+  "version": "0.0.0",
+  "description": "Custom Tooltip component built with tailwindcss",
+  "author": "denisfloyd",
+  "homepage": "https://github.com/denisfloyd/my-turbo-components/blob/main/packages/df-tooltip#readme",
+  "bugs": {
+    "url": "https://github.com/denisfloyd/my-turbo-components/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisfloyd/my-turbo-components.git",
+    "directory": "/packages/df-tooltip"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "license": "MIT",
+  "exports": {
+    ".": "./dist",
+    "./styles.css": "./dist/index.css"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "echo \"no test implemented\" && exit 0",
+    "test:coverage": "echo \"no test implemented\" && exit 0",
+    "lint": "eslint . --ext .tsx,.ts --max-warnings=0",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "cssnano": "^6.0.1",
+    "df-tsconfig": "workspace:*",
+    "eslint-config-df": "workspace:*",
+    "postcss": "^8.4.20",
+    "tailwind-config": "workspace:*",
+    "tsup": "^5.12.9",
+    "typescript": "^4.5.3",
+    "jest-config-df": "workspace:*"
+  },
+  "dependencies": {
+    "tailwind-variants": "^0.1.13",
+    "react": "^18.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
