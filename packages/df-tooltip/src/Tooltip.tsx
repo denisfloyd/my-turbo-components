@@ -58,10 +58,12 @@ const Tooltip = ({ content: tooltipContent, children, placement, type }: Props) 
   const tooltipContentIsString = typeof tooltipContent === 'string';
 
   return (
-    <div className={group()}>
+    <div className={group()} data-testid='group-tooltip'>
       {children}
       <div className={container({ className: tooltipContentIsString ? 'p-2' : '' })}>
-        <span className={content()}>{tooltipContent}</span>
+        <span className={content()} role='tooltip'>
+          {tooltipContent}
+        </span>
         <div className={arrow()} />
       </div>
     </div>
