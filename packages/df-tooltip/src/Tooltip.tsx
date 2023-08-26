@@ -4,30 +4,37 @@ import { tv, VariantProps } from 'tailwind-variants';
 const tooltipTailwind = tv({
   slots: {
     group: 'group relative',
-    container: 'absolute hidden group-hover:flex',
-    content:
-      'relative z-10 min-w-[150px] max-w-xs rounded-sm text-xs leading-none text-slate-50 shadow-lg',
-    arrow: 'absolute -mt-2 h-3 w-3',
+    container:
+      'absolute rounded-sm text-slate-50 opacity-0 shadow-lg transition-opacity duration-200 ease-in-out group-hover:opacity-100',
+    content: 'relative z-10 line-clamp-4 w-max max-w-xs text-xs leading-none',
+    arrow: 'absolute h-3 w-3',
   },
   variants: {
     placement: {
       top: {
-        container: 'left-1/2 top-0 -translate-x-1/2 -translate-y-full transform pb-2',
-        arrow: 'bottom-0 left-1/2 mb-2 -translate-x-1/2 translate-y-[3px] rotate-45 transform',
+        container: '-top-[8px] left-1/2 -translate-x-1/2 -translate-y-full transform',
+        arrow: 'bottom-0 left-1/2 -translate-x-1/2 translate-y-[3px] rotate-45 transform',
       },
       bottom: {
-        group: 'pb-2',
-        container: 'bottom-0 left-1/2 -translate-x-1/2 translate-y-full transform',
-        arrow: 'left-1/2 top-0 -translate-x-1/2 translate-y-[3px] rotate-45 transform',
+        container: '-bottom-[8px] left-1/2 -translate-x-1/2 translate-y-full transform',
+        arrow: 'left-1/2 top-0 -translate-x-1/2 -translate-y-[3px] rotate-45 transform',
+      },
+      left: {
+        container: '-left-[8px] top-1/2 -translate-x-full -translate-y-1/2 transform',
+        arrow: 'right-0 top-1/2 -translate-y-1/2 translate-x-[3px] rotate-45 transform',
+      },
+      right: {
+        container: '-right-[8px] top-1/2 -translate-y-1/2 translate-x-full transform',
+        arrow: 'left-0 top-1/2 -translate-x-[3px] -translate-y-1/2 rotate-45 transform',
       },
     },
     type: {
       default: {
-        content: 'bg-slate-900',
-        arrow: 'bg-slate-900',
+        container: 'bg-slate-700',
+        arrow: 'bg-slate-700',
       },
       error: {
-        content: 'bg-red-700',
+        container: 'bg-red-700',
         arrow: 'bg-red-700',
       },
     },
@@ -48,13 +55,13 @@ const Tooltip = ({ content: tooltipContent, children, placement, type }: Props) 
     type,
   });
 
+  const tooltipContentIsString = typeof tooltipContent === 'string';
+
   return (
     <div className={group()}>
       {children}
-      <div className={container()}>
-        <span className={content({ className: typeof tooltipContent === 'string' ? 'p-2' : '' })}>
-          {tooltipContent}
-        </span>
+      <div className={container({ className: tooltipContentIsString ? 'p-2' : '' })}>
+        <span className={content()}>{tooltipContent}</span>
         <div className={arrow()} />
       </div>
     </div>
