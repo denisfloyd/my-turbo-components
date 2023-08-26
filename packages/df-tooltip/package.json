@@ -26,8 +26,8 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "test": "echo \"no test implemented\" && exit 0",
-    "test:coverage": "echo \"no test implemented\" && exit 0",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "eslint . --ext .tsx,.ts --max-warnings=0",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage"
