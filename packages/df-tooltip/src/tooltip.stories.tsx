@@ -31,8 +31,8 @@ const meta: Meta<typeof Tooltip> = {
       control: 'text',
     },
     placement: {
-      control: 'radio',
-      options: ['top', 'bottom'],
+      control: 'select',
+      options: ['top', 'bottom', 'left', 'right'],
     },
     type: {
       control: 'radio',
