@@ -1,6 +1,6 @@
 {
   "name": "df-tooltip",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Custom Tooltip component built with tailwindcss",
   "author": "denisfloyd",
   "homepage": "https://github.com/denisfloyd/my-turbo-components/blob/main/packages/df-tooltip#readme",
