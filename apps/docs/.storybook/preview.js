@@ -3,6 +3,7 @@ import { withThemeByDataAttribute } from "@storybook/addon-styling";
 import "df-button/styles.css";
 import "df-input/styles.css";
 import 'df-tooltip/styles.css';
+import 'df-checkbox/styles.css';
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {

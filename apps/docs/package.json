@@ -31,6 +31,7 @@
   "dependencies": {
     "df-button": "workspace:*",
     "df-input": "workspace:*",
-    "df-tooltip": "workspace:*"
+    "df-tooltip": "workspace:*",
+    "df-checkbox": "workspace:*"
   }
 }
