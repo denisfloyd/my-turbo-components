@@ -4,7 +4,7 @@ import { tv, VariantProps } from 'tailwind-variants';
 const checkBoxTailwind = tv({
   slots: {
     base: 'relative float-left -ml-[1.5rem] mt-[0.2rem] h-[1.125rem] w-[1.125rem] cursor-pointer appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-white indeterminate:after:absolute indeterminate:after:ml-[0.2rem] indeterminate:after:mt-[6px] indeterminate:after:w-[0.5rem] indeterminate:after:border-[0.075rem] indeterminate:after:border-white focus:transition-[border-color_0.2s] indeterminate:focus:after:border-[0.125rem] indeterminate:focus:after:border-b-0',
-    text: 'inline-block cursor-pointer text-slate-800 dark:text-slate-50',
+    text: 'cursor-normal inline-block text-slate-800 dark:text-slate-50',
   },
   variants: {
     style: {
@@ -30,11 +30,13 @@ const checkBoxTailwind = tv({
 
 export type Props = React.ComponentProps<'input'> &
   VariantProps<typeof checkBoxTailwind> & {
+    id: string;
     label?: string;
     indeterminate?: boolean;
   };
 
 const Checkbox = ({
+  id,
   style,
   className,
   onChange,
@@ -49,12 +51,15 @@ const Checkbox = ({
   });
 
   return (
-    <div className='mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]'>
+    <div
+      className='mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]'
+      data-testid={`checkbox-container-${id}`}
+    >
       <input
         className={base({ className })}
         type='checkbox'
         value=''
-        id='checkboxDefault'
+        id={id}
         onChange={onChange}
         checked={checked}
         disabled={disabled}
