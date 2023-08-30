@@ -1,42 +1,30 @@
-# df-button - Get started
+# df-checkbox - Get started
 
-Custom button react component built with tailwindcss.
+Custom checkbox react component built with tailwindcss.
 
 ## Install
 
-Add Button to your project.
+Add checkbox to your project.
 
-`npm install --save df-button`
+`npm install --save df-checkbox`
 
-`` * added styles.css to your application *``
+` * added styles.css to your application *`
 
 ```
-import 'df-button/styles.css'
+import 'df-checkbox/styles.css'
 ```
 
 ## **Use**
 
-### Button
-`import Button from 'df-button';`
+### Checkbox
+
+`import Checkbox from 'df-checkbox';`
 
 ```
   const example = () => (
     <div>
-       <Button style="primary">Button Label</Button>
+       <Checkbox style="primary" label="Check me!"/>
     </div>
-  )
-```
-
-### Button Group 
-`import Button from 'df-button';`
-
-```
-  const example = () => (
-    <ButtonGroup>
-       <Button style="primary">Button Label</Button>
-       <Button style="primary">Button Label</Button>
-       <Button style="primary">Button Label</Button>
-    </ButtonGroup>
   )
 ```
 
