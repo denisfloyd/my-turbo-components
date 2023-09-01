@@ -50,7 +50,7 @@ jobs:
         id: run-build
         run: pnpm run build:ci
         env:
-          NODE_ENV: "production"
+          NODE_ENV: "${{ secrets.NODE_ENV }}"
 
       - name: 🛫 Create Release Pull Request or Publish to npm
         id: changesets
