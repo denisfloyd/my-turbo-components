@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import Checkbox from './Checkbox';
+import Checkbox from '../Checkbox';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -29,7 +29,7 @@ const meta: Meta<typeof Checkbox> = {
     },
   },
   args: {
-    style: 'primary',
+    checkboxStyle: 'primary',
     label: 'Checkbox',
     disabled: false,
   },
@@ -41,12 +41,12 @@ type Story = StoryObj<typeof Checkbox>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const PrimaryStyle: Story = {
   args: {
-    style: 'primary',
+    checkboxStyle: 'primary',
   },
 };
 
 export const SuccessStyle: Story = {
   args: {
-    style: 'success',
+    checkboxStyle: 'success',
   },
 };

@@ -1,4 +1,4 @@
-import Input from './Input';
+import Input from '../Input';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

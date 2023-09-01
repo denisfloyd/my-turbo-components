@@ -7,7 +7,7 @@ const checkBoxTailwind = tv({
     text: 'cursor-normal inline-block text-slate-800 dark:text-slate-50',
   },
   variants: {
-    style: {
+    checkboxStyle: {
       primary: {
         base: 'checked:border-blue-600 checked:bg-blue-600 indeterminate:border-blue-600 indeterminate:bg-blue-600',
       },
@@ -23,7 +23,7 @@ const checkBoxTailwind = tv({
     },
   },
   defaultVariants: {
-    style: 'primary',
+    checkboxStyle: 'primary',
     isDisabled: false,
   },
 });
@@ -37,16 +37,16 @@ export type Props = React.ComponentProps<'input'> &
 
 const Checkbox = ({
   id,
-  style,
+  checkboxStyle,
   className,
-  onChange,
   disabled,
   checked,
   label,
   indeterminate = false,
+  ...props
 }: Props) => {
   const { base, text } = checkBoxTailwind({
-    style,
+    checkboxStyle,
     isDisabled: disabled,
   });
 
@@ -60,9 +60,9 @@ const Checkbox = ({
         type='checkbox'
         value=''
         id={id}
-        onChange={onChange}
         checked={checked}
         disabled={disabled}
+        {...props}
         // eslint-disable-next-line no-return-assign, no-param-reassign
         ref={el => el && (el.indeterminate = indeterminate && !checked)}
       />

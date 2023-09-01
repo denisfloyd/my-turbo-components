@@ -49,8 +49,6 @@ const getInputStateStyle = (
 export type Props = ComponentProps<'input'> &
   VariantProps<typeof buttonTailwind> & {
     isRequired?: boolean;
-    width?: string;
-    height?: string;
     error?: boolean;
     ref?: React.Ref<HTMLInputElement>;
   };

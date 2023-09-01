@@ -1,6 +1,5 @@
-/* eslint-disable react/react-in-jsx-scope */
-import Button from './Button';
-import ButtonGroupComp from './ButtonGroup';
+import Button from '../Button';
+import ButtonGroupComp from '../ButtonGroup';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -15,7 +14,7 @@ const meta: Meta<typeof Button> = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    style: {
+    buttonStyle: {
       control: 'select',
       options: ['primary', 'success', 'error', 'borderless'],
     },
@@ -32,7 +31,7 @@ type Story = StoryObj<typeof Button>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const PrimaryStyle: Story = {
   args: {
-    style: 'primary',
+    buttonStyle: 'primary',
     children: 'Button',
   },
 };
@@ -40,13 +39,13 @@ export const PrimaryStyle: Story = {
 export const Bordeless: Story = {
   args: {
     children: 'Button',
-    style: 'borderless',
+    buttonStyle: 'borderless',
   },
 };
 
 export const OutlineStyle: Story = {
   args: {
-    style: 'primary',
+    buttonStyle: 'primary',
     children: 'Button',
     isOutline: true,
   },
@@ -55,7 +54,7 @@ export const OutlineStyle: Story = {
 export const Disabled: Story = {
   args: {
     children: 'Button',
-    style: 'primary',
+    buttonStyle: 'primary',
     disabled: true,
   },
 };
@@ -63,7 +62,7 @@ export const Disabled: Story = {
 export const PendingState: Story = {
   args: {
     children: 'Button',
-    style: 'primary',
+    buttonStyle: 'primary',
     isPending: true,
   },
 };
@@ -82,7 +81,7 @@ export const ButtonGroup: Story = {
   ),
   args: {
     children: 'Button',
-    style: 'primary',
+    buttonStyle: 'primary',
   },
 };
 
@@ -100,6 +99,6 @@ export const ButtonGroupWithSameSize: Story = {
   ),
   args: {
     children: 'Button',
-    style: 'primary',
+    buttonStyle: 'primary',
   },
 };

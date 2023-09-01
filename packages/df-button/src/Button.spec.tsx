@@ -28,7 +28,7 @@ describe('Button', () => {
     { style: 'borderless', class: 'bg-transparent' },
   ].forEach(({ style, class: className }) => {
     it(`should render button ${style} style`, () => {
-      render(<Button style={style as any}>Hello</Button>);
+      render(<Button buttonStyle={style as any}>Hello</Button>);
 
       expect(screen.getByRole('button')).toHaveClass(className);
     });
