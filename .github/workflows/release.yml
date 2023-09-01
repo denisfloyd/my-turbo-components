@@ -49,8 +49,8 @@ jobs:
       - name: 👷 Build
         id: run-build
         run: pnpm run build:ci
-          env:
-            NODE_ENV: "production"
+        env:
+          NODE_ENV: "production"
 
       - name: 🛫 Create Release Pull Request or Publish to npm
         id: changesets
