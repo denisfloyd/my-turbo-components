@@ -1,5 +1,17 @@
 # df-button
 
+## 1.0.0
+
+### Major Changes
+
+- 96edb85: Changed prop style name to 'buttonStyle'.
+  This change was made to not override the native style prop
+  Users should rename the prop on component usage
+
+### Patch Changes
+
+- f8dd5a8: Added dotenv to set minify css with css-nano while doing build on prod
+
 ## 0.1.2
 
 ### Patch Changes

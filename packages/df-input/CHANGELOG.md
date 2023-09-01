@@ -1,5 +1,15 @@
 # df-input
 
+## 1.0.0
+
+### Major Changes
+
+- f8dd5a8: Bump input version to stable
+
+### Patch Changes
+
+- f8dd5a8: Added dotenv to set minify css with css-nano while doing build on prod
+
 ## 0.1.2
 
 ### Patch Changes
