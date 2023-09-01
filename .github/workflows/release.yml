@@ -29,10 +29,6 @@ jobs:
           node-version: 18
           cache: 'pnpm'
 
-      - name: 🛠 'Create env file'
-        run: |
-          echo "${{ secrets.NODE_ENV }}" > .env
-
       - name: 🧳 Get pnpm store directory
         shell: bash
         run: |
@@ -53,6 +49,8 @@ jobs:
       - name: 👷 Build
         id: run-build
         run: pnpm run build:ci
+          env:
+            NODE_ENV: "production"
 
       - name: 🛫 Create Release Pull Request or Publish to npm
         id: changesets
