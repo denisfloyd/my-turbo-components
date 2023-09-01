@@ -40,7 +40,7 @@ describe('Tooltip', () => {
 
   it('should render tooltip component with error type', () => {
     render(
-      <Tooltip content='Tooltip content' type='error'>
+      <Tooltip content='Tooltip content' tooltipStyle='error'>
         <ChildComponent />
       </Tooltip>,
     );

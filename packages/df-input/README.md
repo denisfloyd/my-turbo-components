@@ -27,6 +27,24 @@ import 'df-input/styles.css'
   )
 ```
 
+#### Props
+
+```typescript
+type Props = React.ClassAttributes<HTMLInputElement> & React.InputHTMLAttributes<HTMLInputElement>
+
+&
+```
+
+| Prop | Values |
+| -------- | ------- |
+| state | 'primary', 'required', 'error', 'borderless' |
+| width | 'sm', 'md', 'lg', 'full' |
+| height | 'sm', 'md', 'lg' |
+| isRequired | true, false |
+| error | true, false |
+| disabled | true, false |
+| className | tailwind classes -> string format |
+
 ## Override styles
 
 You can easily override any style of component just adding a custom tailwind class inside element's `className` property. For that, it's required to have tailwindcss as a dependency and setup on the project.

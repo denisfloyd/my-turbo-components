@@ -27,6 +27,23 @@ import 'df-button/styles.css'
   )
 ```
 
+#### Props
+
+```typescript
+type Props = React.ClassAttributes<HTMLButtonElement> & React.ButtonHTMLAttributes<HTMLButtonElement>
+
+&
+```
+
+| Prop | Values |
+| -------- | ------- |
+| buttonStyle | 'primary', 'success', 'error', 'borderless' |
+| size | 'sm', 'md', 'lg' |
+| isOutline | true, false |
+| isPending | true, false |
+| disabled | true, false |
+| className | tailwind classes -> string format |
+
 ### Button Group 
 `import Button from 'df-button';`
 
@@ -39,6 +56,11 @@ import 'df-button/styles.css'
     </ButtonGroup>
   )
 ```
+
+#### Props
+| Prop | Values |
+| -------- | ------- |
+| buttonsHasSameWidth | true, false
 
 ## Override styles
 

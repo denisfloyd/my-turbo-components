@@ -30,8 +30,8 @@
   },
   "dependencies": {
     "df-button": "workspace:*",
+    "df-checkbox": "workspace:*",
     "df-input": "workspace:*",
-    "df-tooltip": "workspace:*",
-    "df-checkbox": "workspace:*"
+    "df-tooltip": "workspace:*"
   }
 }

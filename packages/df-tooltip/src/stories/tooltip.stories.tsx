@@ -1,4 +1,4 @@
-import Tooltip from './Tooltip';
+import Tooltip from '../Tooltip';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -34,7 +34,7 @@ const meta: Meta<typeof Tooltip> = {
       control: 'select',
       options: ['top', 'bottom', 'left', 'right'],
     },
-    type: {
+    tooltipStyle: {
       control: 'radio',
       options: ['default', 'error'],
     },
@@ -42,7 +42,7 @@ const meta: Meta<typeof Tooltip> = {
   args: {
     children: 'Button',
     placement: 'top',
-    type: 'default',
+    tooltipStyle: 'default',
     content: 'Tooltip content',
   },
   decorators: [
@@ -63,7 +63,7 @@ export const DefaultStyle: Story = {
   args: {
     children: 'Button',
     placement: 'top',
-    type: 'default',
+    tooltipStyle: 'default',
     content: 'Tooltip content',
   },
 };
@@ -72,7 +72,7 @@ export const ErrorStyle: Story = {
   args: {
     children: 'Button',
     placement: 'top',
-    type: 'error',
+    tooltipStyle: 'error',
     content: 'Tooltip content',
   },
 };

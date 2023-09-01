@@ -6,7 +6,7 @@ const buttonTailwind = tv({
     base: 'relative cursor-pointer rounded border-0 px-4 py-2 text-slate-50 transition-all duration-1000',
   },
   variants: {
-    style: {
+    buttonStyle: {
       primary: 'bg-blue-700 outline-blue-700 hover:bg-blue-600',
       success: 'bg-emerald-700 outline-emerald-700 hover:bg-emerald-600',
       error: 'bg-red-700 outline-red-700 hover:bg-red-600',
@@ -25,7 +25,7 @@ const buttonTailwind = tv({
     },
   },
   defaultVariants: {
-    style: 'primary',
+    buttonStyle: 'primary',
     size: 'md',
     isOutline: false,
   },
@@ -60,7 +60,7 @@ export type Props = React.ComponentProps<'button'> &
   VariantProps<typeof buttonTailwind> & { isPending?: boolean };
 
 const Button = ({
-  style,
+  buttonStyle,
   size,
   isOutline,
   isPending = false,
@@ -70,7 +70,7 @@ const Button = ({
   ...props
 }: Props) => {
   const { base } = buttonTailwind({
-    style,
+    buttonStyle,
     size,
     isOutline,
     disabled: isPending || disabled,

@@ -28,7 +28,7 @@ const tooltipTailwind = tv({
         arrow: 'left-0 top-1/2 -translate-x-[3px] -translate-y-1/2 rotate-45 transform',
       },
     },
-    type: {
+    tooltipStyle: {
       default: {
         container: 'bg-slate-700',
         arrow: 'bg-slate-700',
@@ -41,7 +41,7 @@ const tooltipTailwind = tv({
   },
   defaultVariants: {
     placement: 'top',
-    type: 'default',
+    tooltipStyle: 'default',
   },
 });
 
@@ -49,10 +49,10 @@ export type Props = VariantProps<typeof tooltipTailwind> & { children: React.Rea
   content: React.ReactNode;
 };
 
-const Tooltip = ({ content: tooltipContent, children, placement, type }: Props) => {
+const Tooltip = ({ content: tooltipContent, children, placement, tooltipStyle }: Props) => {
   const { group, container, content, arrow } = tooltipTailwind({
     placement,
-    type,
+    tooltipStyle,
   });
 
   const tooltipContentIsString = typeof tooltipContent === 'string';
