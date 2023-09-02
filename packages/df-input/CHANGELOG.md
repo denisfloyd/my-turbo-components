@@ -1,5 +1,11 @@
 # df-input
 
+## 1.0.1
+
+### Patch Changes
+
+- 3d0aefe: Fixed dot env on production build
+
 ## 1.0.0
 
 ### Major Changes
