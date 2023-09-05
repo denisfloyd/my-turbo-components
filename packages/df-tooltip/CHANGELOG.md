@@ -1,5 +1,11 @@
 # df-tooltip
 
+## 1.0.2
+
+### Patch Changes
+
+- 21d0331: Bump tailwind-variants version
+
 ## 1.0.1
 
 ### Patch Changes
