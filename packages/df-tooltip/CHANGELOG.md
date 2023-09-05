@@ -1,5 +1,12 @@
 # df-tooltip
 
+## 1.0.1
+
+### Patch Changes
+
+- 3d0aefe: Fixed dot env on production build
+- b3de96d: Bump tailwind-variants version
+
 ## 1.0.0
 
 ### Major Changes
