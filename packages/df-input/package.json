@@ -45,7 +45,7 @@
     "jest-config-df": "workspace:*"
   },
   "dependencies": {
-    "tailwind-variants": "^0.1.13",
+    "tailwind-variants": "^0.1.14",
     "react": "^18.1.0"
   },
   "publishConfig": {
